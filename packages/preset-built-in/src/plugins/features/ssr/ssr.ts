@@ -167,9 +167,7 @@ export default (api: IApi) => {
     );
     api.writeTmpFile({
       path: `${TMP_PLUGIN_DIR}/${CLIENT_EXPORTS}.ts`,
-      content: Mustache.render(clientExportsContent, {
-        SSRUtils: winPath(require.resolve('@umijs/utils/lib/ssr')),
-      }),
+      content: clientExportsContent,
     });
   });
 
