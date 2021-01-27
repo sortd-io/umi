@@ -15,9 +15,7 @@ beforeEach(() => {
   }
 });
 
-afterEach(() => {
-  cleanup();
-});
+afterEach(cleanup);
 
 test('api.writeTmpFile error in register stage', async () => {
   const cwd = join(fixtures, 'api-writeTmpFile');
@@ -389,6 +387,7 @@ xtest('ssr dynamicImport', async () => {
     'p__Bar.css': '/p__Bar.chunk.css',
   };
 
+  // without webpack, so export default
   const render = require(tmpServerFile).default;
   // render /
   const homeResult = await render({
