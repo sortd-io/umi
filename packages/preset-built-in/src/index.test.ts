@@ -152,8 +152,6 @@ test('ssr', async () => {
     },
   });
   expect(existsSync(tmpServerFile)).toBeTruthy();
-  const { isBrowser } = require(tmpExportFile);
-  expect(isBrowser()).toEqual(true);
 
   const render = require(tmpServerFile).default;
   const { rootContainer, html } = await render({
@@ -186,9 +184,6 @@ test('ssr modifyServerHTML', async () => {
     },
   });
   expect(existsSync(tmpServerFile)).toBeTruthy();
-  const { isBrowser } = require(tmpExportFile);
-  expect(isBrowser()).toEqual(true);
-
   const render = require(tmpServerFile).default;
   const { rootContainer, html } = await render({
     path: '/',
