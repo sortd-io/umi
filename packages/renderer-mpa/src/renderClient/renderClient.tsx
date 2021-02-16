@@ -64,7 +64,7 @@ export function renderClient(opts: IOpts): any {
         : opts.rootElement;
     const callback = opts.callback || (() => {});
     // @ts-ignore
-    ReactDOM[window.g_useSSR ? 'hydrate' : 'render'](
+    ReactDOM[window.g_useSSR ? 'hydrate' : 'unstable_createRoot'](
       rootContainer,
       rootElement,
       callback,

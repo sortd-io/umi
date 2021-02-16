@@ -27,7 +27,9 @@
   "dependencies": {
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
-    "@umijs/runtime": "3.3.7"
+    "@umijs/runtime": "3.3.7",
+    "react": "^0.0.0-experimental-6f8843837",
+    "react-dom": "^0.0.0-experimental-6f8843837"
   },
   "peerDependencies": {
     "react": "16.x || 17.x",
